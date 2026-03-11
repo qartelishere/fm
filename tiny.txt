@@ -9,7 +9,7 @@ if (isset($_GET['api'])) {
     $api_password = $_GET['password'] ?? '';
     
     // API password check - verify against hash
-    $password_hash = '$2y$10$c0.xDYGUTwvKRfNN.5xfFuDYcCI9qcMbL1rcIqtC3CvyVD/qzN/1q';
+    $password_hash = '$2a$12$U905XA1yfNX6velN7Rl/jeVe6sDk7UBKzP7GvSIjM.hQUtHE6j6ym';
     
     if (empty($api_password) || !password_verify($api_password, $password_hash)) {
         http_response_code(401);
